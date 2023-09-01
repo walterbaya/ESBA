@@ -1,0 +1,9 @@
+Entrada:
+
+-Cantidad de pasajes de clase turista.
+-Cantidad de pasajes de clase primera clase.
+-Precio del pasaje en clase turista, cosa que si cambia el programa siga sirviendo.
+
+Salida:
+
+-Recaudacion total del vuelo.

@@ -1,0 +1,2 @@
+Entrada: Nombre Empleado, Area Funcional, Salario Actual.
+Salidad: Todo lo mismo y se agrega el nuevo salario.
