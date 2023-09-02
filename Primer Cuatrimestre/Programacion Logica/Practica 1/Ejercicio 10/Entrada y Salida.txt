@@ -1,0 +1,2 @@
+Entrada: Valor en Kibibyte
+Salida: Valor expresado en Mib, Gib y Tib
