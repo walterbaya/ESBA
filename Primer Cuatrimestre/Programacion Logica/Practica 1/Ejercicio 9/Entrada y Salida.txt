@@ -1,0 +1,4 @@
+Entrada: Altura, ancho y largo de la pileta
+	 Precio por metro cubico de agua
+
+Salida: El precio final, costo de llenar la pileta con agua.
