@@ -17,12 +17,6 @@ Pastafrola de dos pisos.
 Precio:
 12.00
 Despues de medianoche (0==no, 1==yes)
-1
-
-Factura:
-  Pastafrola dos pisos  	12.00
-  Envío      		7.00
-  Total         		19.00*/
 #include <iostream>
 
 using namespace std;
@@ -31,36 +25,36 @@ int main()
 {
     string producto;
     float precio;
-    float envio;
+    char medianoche; //s o un n 
     float total;
-    int despuesMedianoche;
-    
-    cout<<"Ingrese producto: "<<endl;
-    cin>>producto;
-    
-    cout<<"Ingrese precio: "<<endl;
-    cin>>precio;
-    
-    cout<<"Despues de medianoche (0==no, 1==yes)"<<endl;
-    cin>>despuesMedianoche;
-    
-    if(precio < 20){
-        envio = 2;
+    float adicional;
+    cout << "Ingrese producto: ";
+    cin >> producto;
+    cout << endl << "Precio: "<< precio;
+    cin >> precio;
+    cout << endl << "Despues de medianoche (0=NO 1=SI): ";
+    cin >> medianoche;
+if(precio < 20)
+    {
+        adicional = 2;
     }
-    else{
-        envio = 3;
+    else
+    {
+        adicional = 3;
     }
     
-    total = precio + envio;
-    
-    if(despuesMedianoche == 1){
-        total = total + 5;
+    if(medianoche == 's')
+    {
+        adicional += 5; //Operador interesante para usar
     }
-
-    cout<<"Factura: "<<endl;
-    cout<<producto<<": "<<precio<<endl;
-    cout<<"Envio: "<<envio<<endl;
-    cout<<"Total: "<<total<<endl;
     
+    total = precio + adicional;
+    
+    cout << endl << "Factura: ";
+    cout << endl << "\t" << producto << "\t\t" << precio;
+    cout << endl << "\tEnvio " << "\t\t" << adicional;
+    cout << endl << "\tTotal " << "\t\t" << total; 
+            
+            
     return 0;
 }
