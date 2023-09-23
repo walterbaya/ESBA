@@ -35,7 +35,7 @@ Algoritmo Ejercicio_7
 		FinSi
 	FinSi
 	
-	resto = num1 MOD num2
+	resto <- num1 MOD num2
 	Si resto = num3
 		Escribir "El resto de hacer ", num1, " Mod ", num2 ," es igual a ", num3
 	SiNo
