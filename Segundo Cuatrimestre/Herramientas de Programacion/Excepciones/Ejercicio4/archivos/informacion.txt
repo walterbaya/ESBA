@@ -1,0 +1,2 @@
+nombre, apellido, edad, estatura
+Jorge,Mercado,28,1.78
