@@ -1,0 +1,15 @@
+Modificaciones DER
+
+-Se borro la relacion disponibilidad
+-Se cambiaron los nombres de las relaciones reemplazandolas por verbos o acciones
+-Se cambiaron los nombres de las entidades pasandolas a sustantivos singulares.
+
+Modificaciones Base de datos
+
+-Clasificacion: pasa a llamarse Tipos_predios, siguiendo lo comun que es en una relacion many to
+many poner ambos nombres separados por un guion.
+
+-Realizacion: pasa a llamarse Actividades_canchas.
+
+-Disponibilidad: pasa a llamarse Turnos_canchas, pero posteriormente se elimino como indicaba el diagrama.
+
