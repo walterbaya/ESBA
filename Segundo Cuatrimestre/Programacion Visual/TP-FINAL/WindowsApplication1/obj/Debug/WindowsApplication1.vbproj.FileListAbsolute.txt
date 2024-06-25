@@ -18,13 +18,6 @@ D:\Documentos\Visual Studio 2008\Projects\WindowsApplication1\WindowsApplication
 D:\Documentos\Visual Studio 2008\Projects\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.Form1.resources
 D:\Documentos\Visual Studio 2008\Projects\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.Resources.resources
 D:\Documentos\Visual Studio 2008\Projects\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.vbproj.GenerateResource.Cache
-C:\Users\walte\Desktop\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.exe
-C:\Users\walte\Desktop\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.xml
-C:\Users\walte\Desktop\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.pdb
-C:\Users\walte\Desktop\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.exe
-C:\Users\walte\Desktop\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.pdb
-C:\Users\walte\Desktop\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.xml
-C:\Users\walte\Desktop\WindowsApplication1\WindowsApplication1\obj\Debug\ResolveAssemblyReference.cache
-C:\Users\walte\Desktop\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.Form1.resources
-C:\Users\walte\Desktop\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.Resources.resources
-C:\Users\walte\Desktop\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.vbproj.GenerateResource.Cache
+C:\Users\walte\Documents\GitHub\ESBA\Segundo Cuatrimestre\Programacion Visual\TP-FINAL\WindowsApplication1\obj\Debug\WindowsApplication1.exe
+C:\Users\walte\Documents\GitHub\ESBA\Segundo Cuatrimestre\Programacion Visual\TP-FINAL\WindowsApplication1\obj\Debug\WindowsApplication1.xml
+C:\Users\walte\Documents\GitHub\ESBA\Segundo Cuatrimestre\Programacion Visual\TP-FINAL\WindowsApplication1\obj\Debug\WindowsApplication1.pdb
