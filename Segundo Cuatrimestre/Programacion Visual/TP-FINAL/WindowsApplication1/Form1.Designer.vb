@@ -149,11 +149,11 @@ Partial Class Form1
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Papyrus", 24.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.YellowGreen
         Me.Label1.Location = New System.Drawing.Point(871, 118)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(289, 51)
+        Me.Label1.Size = New System.Drawing.Size(293, 37)
         Me.Label1.TabIndex = 8
         Me.Label1.Text = "Máximos Puntajes"
         '
@@ -259,11 +259,11 @@ Partial Class Form1
         'd
         '
         Me.d.AutoSize = True
-        Me.d.Font = New System.Drawing.Font("Chiller", 80.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.d.Font = New System.Drawing.Font("Microsoft Sans Serif", 80.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.d.ForeColor = System.Drawing.Color.YellowGreen
         Me.d.Location = New System.Drawing.Point(358, 32)
         Me.d.Name = "d"
-        Me.d.Size = New System.Drawing.Size(227, 124)
+        Me.d.Size = New System.Drawing.Size(300, 120)
         Me.d.TabIndex = 0
         Me.d.Text = "Kajut"
         '
@@ -314,7 +314,6 @@ Partial Class Form1
         Me.clock.Name = "clock"
         Me.clock.Size = New System.Drawing.Size(45, 56)
         Me.clock.TabIndex = 19
-        Me.clock.Text = "5"
         '
         'ProgressBar1
         '
@@ -456,7 +455,7 @@ Partial Class Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1344, 841)
+        Me.ClientSize = New System.Drawing.Size(1344, 749)
         Me.Controls.Add(Me.TabControl1)
         Me.Name = "Form1"
         Me.Text = "Form1"

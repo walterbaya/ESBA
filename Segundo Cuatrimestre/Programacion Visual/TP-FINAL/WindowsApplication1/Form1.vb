@@ -1,13 +1,11 @@
 ﻿Imports System.Threading
+Imports MySql.Data.MySqlClient
+
 
 Public Class Form1
 
-
-    Dim listaUsuarios As New List(Of String)()
-    Dim listaContrasenias As New List(Of String)()
-    Dim maximosPuntajes As New List(Of Integer)()
     Dim tiempo As Integer
-    Dim tiempoLimite As Integer = 5
+    Dim tiempoLimite As Integer
     Dim puntos As Integer
     Dim numeroJugador As Integer
     Dim modo As Integer
@@ -18,10 +16,11 @@ Public Class Form1
     Dim respuestas As New List(Of String)()
     Dim opciones As New List(Of String)() 'se definen las variables'
 
-
+    'QQ'
     Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button5.Click ''
-        If listaUsuarios.Contains(username_tb.Text) And listaContrasenias.Contains(password_tb.Text) Then 'verifica si lista de usuario y lista de contraseña contienen lo ingresado en el texto, es decir que existe el usuario'
-            numeroJugador = listaUsuarios.IndexOf(username_tb.Text) 'le asigna a numero de jugador el indice que ocupa en la lista de usuario '
+        'verifica si lista de usuario y lista de contraseña contienen lo ingresado en el texto, es decir que existe el usuario'
+        If login(username_tb.Text, password_tb.Text) Then
+            numeroJugador = obtener_id_usuario(username_tb.Text)
             cargar_preguntas() 'Comienza a cargar las preguntas'
             Timer1.Start() 'Inicia el timer'
         Else
@@ -31,6 +30,7 @@ Public Class Form1
 
 
     'Carga las preguntas y las opciones en los botones  y el cuadro de texto'
+
     Private Sub cargar_preguntas()
 
         'Inicializa el generador de números aleatorios'
@@ -48,20 +48,17 @@ Public Class Form1
         TabControl1.SelectedIndex = 1  'Mueve a la pagina de juego, donde estan las preguntas'
     End Sub
 
+
     Private Sub register_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles register.Click
         If username_tb.Text.Length = 0 Or password_tb.Text.Length = 0 Then 'verifica si nombre de usurio y contraseña no esten vacios'
             MsgBox("Error, Ingresa un usuario y contraseña no vacios")
-        ElseIf listaUsuarios.Contains(username_tb.Text.Trim) Then 'verifica que no se registren dos veces un mismo nombre de usuario'
+        ElseIf existe_usuario(username_tb.Text.Trim) Then 'verifica que no se registren dos veces un mismo nombre de usuario'
             MsgBox("Error, Usuario ya registrado, crea uno nuevo o logueate") 'Manda el mensaje cuando encuentra un nombre de usuario repetido'
         Else
-            listaContrasenias.Add(password_tb.Text) 'Añade una nueva contraseña'
-            listaUsuarios.Add(username_tb.Text) 'añande nombre de usuario a la lista de usuarios'
-            maximosPuntajes.Add(0) 'Asigna cero de puntaje maximo al usuario que recien se registro'
-            puntos = 0             'Asigna los  puntos con los que arranca'
-
+            'Crear usuario'
             'el numero del jugador va a ser el indice de el ultimo elemento de la lista de usuarios, porque los va agregando al final a medida que se registran'
-            numeroJugador = listaUsuarios.Count - 1
-
+            numeroJugador = crear_usuario(username_tb.Text, password_tb.Text)
+            puntos = 0             'Asigna los  puntos con los que arranca'
             cargar_preguntas() 'carga las preguntas para comenzar el juego '
             Timer1.Start() 'comienza el timer'
         End If
@@ -76,26 +73,12 @@ Public Class Form1
         respuestas.Clear()
         opciones.Clear()
 
-        Select Case modo
-            'preguntas modo facil'
-            Case 0
-                preguntas.AddRange(New String() {"¿Cuál es el planeta más grande del sistema solar?", "¿Quién escribió Romeo y Julieta?", "¿Cuál es la capital de Francia?", "¿Cuál es el océano más grande del mundo?", "¿Qué elemento químico tiene el símbolo H?"})
-                respuestas.AddRange(New String() {"Júpiter", "William Shakespeare", "París", "Pacífico", "Hidrógeno"})
-                opciones.AddRange(New String() {"Marte", "Júpiter", "Venus", "Saturno", "William Shakespeare", "Charles Dickens", "Jane Austen", "Mark Twain", "Berlín", "Madrid", "Roma", "París", "Atlántico", "Índico", "Pacífico", "Ártico", "Hierro", "Hidrógeno", "Helio", "Plomo"})
-                'preguntas modo medio'
-            Case 1
-                preguntas.AddRange(New String() {"¿Cuál es el nombre del fenómeno físico por el cual la luz se descompone en diferentes colores al atravesar un prisma?", "¿Quién descubrió la estructura en forma de doble hélice del ADN en 1953?", "¿En qué año se inauguró la Torre Eiffel en París?", "¿Cuál es el río más largo de África?", "¿Qué científico propuso la teoría de la relatividad?"})
-                respuestas.AddRange(New String() {"Descomposición de la luz", "James Watson y Francis Crick", "1889", "Nilo", "Albert Einstein"})
-                opciones.AddRange(New String() {"Reflexión", "Refracción", "Dispersión", "Descomposición de la luz", "Albert Einstein", "Isaac Newton", "James Watson y Francis Crick", "Galileo Galilei", "1879", "1889", "1900", "1920", "Amazonas", "Nilo", "Congo", "Zambeze", "Isaac Newton", "Galileo Galilei", "Albert Einstein", "Stephen Hawking"})
-                'preguntas modo dificil'
-            Case 2
-                preguntas.AddRange(New String() {"¿Cuál es la constante matemática que se define como la relación entre la circunferencia de un círculo y su diámetro?", "¿Qué filósofo griego es conocido por su método de enseñanza basado en el diálogo y la pregunta socrática?", "¿En qué año se fundó la Organización de las Naciones Unidas (ONU)?", "¿Cuál es el nombre de la galaxia más cercana a la Vía Láctea?", "¿Cuál es el nombre del compuesto químico con la fórmula H2O2?"})
-                respuestas.AddRange(New String() {  "Pi", "Sócrates","1945","Andrómeda","Peróxido de hidrógeno"})
-                opciones.AddRange(New String() {"Euler", "Phi", "Pi", "Theta", "Platón", "Aristóteles", "Sócrates", "Heráclito", "1919", "1939", "1945", "1955", "Andrómeda", "Vía Láctea", "Triángulo", "Galaxia Espiral de Barnard", "Ácido clorhídrico", "Peróxido de hidrógeno", "Ácido sulfúrico", "Ácido cítrico"})
-        End Select
+
+        preguntas.AddRange(obtener_preguntas(modo))
+        respuestas.AddRange(obtener_respuestas(modo))
+        opciones.AddRange(obtener_opciones(modo))
 
         'carga el contenido de las listas'
-
         tiempo = 0
         ProgressBar1.Value = 0
         puntos = 0 'pone puntos a 0'
@@ -108,9 +91,18 @@ Public Class Form1
     'Establece los valores minimo y maximo de la barra y reinicia el juego'
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         ProgressBar1.Minimum = 0
+        setear_tiempo_limite(tiempoLimite)
         ProgressBar1.Maximum = tiempoLimite
         modo = 0
+        clock.Text = tiempoLimite
         reiniciarJuego()
+
+        'Limpia los items de la lista de maximos puntajes'
+        top_scorers.Items.Clear()
+
+        For Each puntaje In obtener_maximos_puntajes(obtener_puntajes(), obtener_usuarios()).ToArray()
+            top_scorers.Items.Add(puntaje)
+        Next
 
     End Sub
 
@@ -126,7 +118,8 @@ Public Class Form1
             Timer1.Stop()  'para el timer'
             tiempo = 0      'asigna la variable tiempo en cero'
             ProgressBar1.Value = 0 'la barra vuelve a estar en 0'
-            clock.Text = 5
+            clock.Text = tiempoLimite
+
 
             'Si se termino el tiempo para la pregunta, nos fijamos si es la ultima pregunta, sino borramos la pregunta, cargamos la siguiente'
 
@@ -163,9 +156,10 @@ Public Class Form1
             Else
                 cargar_preguntas()  'vuelve a cargar las prenguntas'
 
-                tiempo = 0   'pone el tiempo en estado inicial'
                 ProgressBar1.Value = 0 'pone a  la barra en estado inicial'
+                tiempo = 0   'pone el tiempo en estado inicial'
                 clock.Text = 5 'pone el numero en 0'
+            
                 'Timer1.Interval = 1000' 'reinicio el reloj'
                 option1.Enabled = False 'una vez que se contesta la pregunta se desactiva el menu por medio segundo'
                 option2.Enabled = False
@@ -204,16 +198,14 @@ Public Class Form1
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
-        maximosPuntajes(numeroJugador) = Math.Max(maximosPuntajes(numeroJugador), puntos) 'compara si los puntos que obtuvo el jugador son mas grande que los obtenidos hasta esta hora'
+        actualizar_puntaje_usuario(numeroJugador, Math.Max(obtener_puntaje_usuario(numeroJugador), puntos)) 'compara si los puntos que obtuvo el jugador son mas grande que los obtenidos hasta esta hora'
 
         'Limpia los items de la lista de maximos puntajes'
         top_scorers.Items.Clear()
 
-        For Each puntaje In GameFunctions.obtener_maximos_puntajes(maximosPuntajes, listaUsuarios).ToArray()
+        For Each puntaje In obtener_maximos_puntajes(obtener_puntajes(), obtener_usuarios()).ToArray()
             top_scorers.Items.Add(puntaje)
         Next
-
-        'top_scorers.Items.AddRange(GameFunctions.obtener_maximos_puntajes(maximosPuntajes, listaUsuarios).ToArray())'
 
         porCodigo = True
         TabControl1.SelectedIndex = 0
@@ -270,6 +262,9 @@ Public Class Form1
         If result = DialogResult.No Then
             e.Cancel = True
         End If
+
     End Sub
+
+
 
 End Class
