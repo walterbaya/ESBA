@@ -25,13 +25,16 @@
     Public Function obtener_maximos_puntajes(ByVal puntajes As List(Of Integer), ByVal jugadores As List(Of String)) As List(Of String)
         Dim res As New List(Of String)()
 
-        Dim copiaPuntajes As New List(Of Integer)(puntajes) 'Hago una copia de la lista, porque aunque la pasamos por valor se pisa'
+        If puntajes.Count > 0 And jugadores.Count > 0 Then
+            Dim copiaPuntajes As New List(Of Integer)(puntajes) 'Hago una copia de la lista, porque aunque la pasamos por valor se pisa'
 
-        While (copiaPuntajes.Max() <> -1)   'me fijo que todavia haya numeros en la copia de la lista que no sean -1'
-            Dim indiceMaximo As Integer = copiaPuntajes.IndexOf(copiaPuntajes.Max())   'si todavia hay busco el mayor puntaje que va quedando'
-            res.Add(jugadores(indiceMaximo) & ": " & copiaPuntajes(indiceMaximo)) 'en ese caso armo el jugador : puntaje'
-            copiaPuntajes(indiceMaximo) = -1  'lo pongo en -1 para que no se fije mas en ese'
-        End While
+            While (copiaPuntajes.Max() <> -1)   'me fijo que todavia haya numeros en la copia de la lista que no sean -1'
+                Dim indiceMaximo As Integer = copiaPuntajes.IndexOf(copiaPuntajes.Max())   'si todavia hay busco el mayor puntaje que va quedando'
+                res.Add(jugadores(indiceMaximo) & ": " & copiaPuntajes(indiceMaximo)) 'en ese caso armo el jugador : puntaje'
+                copiaPuntajes(indiceMaximo) = -1  'lo pongo en -1 para que no se fije mas en ese'
+            End While
+        End If
+
 
         Return res
     End Function
