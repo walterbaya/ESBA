@@ -4,11 +4,12 @@ Escribir un programa que pida el ingreso de tres nombres de personas y sus edade
 */
 
 using System;
+using Tarea1;
 namespace Baya_Walter {
     class Ejercicio1 {
 
         static void Main() {
-            float suma = 0;
+            /*float suma = 0;
 
             for (int i = 0; i < 3; i++)
             {
@@ -18,6 +19,8 @@ namespace Baya_Walter {
                 suma += float.Parse(Console.ReadLine());
             }
             Console.WriteLine("El promedio de edades es: " + suma / 3.0);
+            */
+            Ejercicio2.solucion();
         }
     }
 }

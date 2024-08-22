@@ -18,5 +18,16 @@ namespace Tarea1
 {
     internal class Ejercicio2
     {
+        public static void solucion() {
+
+            double res = Math.PI;
+
+
+            Console.Write("Ingrese radio: ");
+            double radio = double.Parse(Console.ReadLine());
+            res = res* Math.Pow(radio, 2);
+            Console.Write("El area del circulo es: " + res);
+        
+        }
     }
 }
