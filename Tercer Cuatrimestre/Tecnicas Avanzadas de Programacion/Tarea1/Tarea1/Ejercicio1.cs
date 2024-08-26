@@ -20,7 +20,9 @@ namespace Baya_Walter {
             }
             Console.WriteLine("El promedio de edades es: " + suma / 3.0);
             */
-            Ejercicio2.solucion();
+            //Ejercicio2.solucion();
+            //Ejercicio3.solucion();
+            Ejercicio4.solucion();
         }
     }
 }
