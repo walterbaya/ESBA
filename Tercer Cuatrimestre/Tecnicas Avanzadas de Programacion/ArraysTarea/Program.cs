@@ -8,23 +8,24 @@ namespace WalterBaya
     class Program
     {
         //Ejercicio 1
-        static void arraySum(int[] array)
+        static int arraySum(int[] array)
         {
             int acum = 0;
 
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < array.Length; i++)
             {
                 acum += array[i];
             }
 
             Console.WriteLine("Sum: " + acum);
+            return acum;
         }
         static void biggest(int[] array)
         {
             int biggest = array[0];
 
 
-            for (int i = 1; i < 10; i++)
+            for (int i = 1; i < array.Length; i++)
             {
                 if (array[i] >= biggest)
                 {
@@ -40,7 +41,7 @@ namespace WalterBaya
             int smallest = array[0];
 
 
-            for (int i = 1; i < 10; i++)
+            for (int i = 1; i < array.Length; i++)
             {
                 if (array[i] <= smallest)
                 {
@@ -53,7 +54,7 @@ namespace WalterBaya
 
         static void printArray(int[] array)
         {
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < array.Length; i++)
             {
                 Console.Write(array[i] + " ");
             }
@@ -80,7 +81,7 @@ namespace WalterBaya
         static void printTable(int[,] table) {
             for (int i = 0; i < table.GetLength(0); i++)
             {
-                for (int j = 0; j < 3; j++)
+                for (int j = 0; j < table.GetLength(1); j++)
                 {
                     Console.Write(table[i, j] + " ");
                 }
@@ -152,6 +153,54 @@ namespace WalterBaya
             return chain.ToString();
         }
 
+        //Ejercicio 4
+
+        static bool isPrime(int a) {
+            bool res = true;
+            if (a > 1) {
+                for (int i = 2; i < Math.Sqrt(a); i++)
+                {
+                    if (a % i == 0) {
+                        res = false;
+                    }
+                }   
+             }
+            return res;
+        }
+
+        static int[] firstNPrimes(int n) {
+            int primeCounter = 0;
+            int[] res = new int[n];
+
+            int i = 2;
+            while (primeCounter < n) {
+                if (isPrime(i)) {
+                    res[primeCounter] = i;
+                    primeCounter++;
+                }
+                i++;
+            }
+
+            return res;
+        } 
+        /*
+         4- En la Clase “Program” del Namespace “Apellido_Nombre” (escriban su apellido y su nombre):
+        Crear el método bool esPrimo(int a) que devuelve true si un número es primo y false si no lo es.
+        En el main, buscar los primeros 50 números primos.
+        Guardar todos los números en un array de 50 posiciones.
+        Mostrar el contenido del array resultante.
+        Mostrar en pantalla la suma (acumulación) de todos los números del array.
+        Mostrar en pantalla el promedio de todos los números del array.
+
+        Puntos extra por:
+        Validar en la función bool esPrimo(int a), que la variable ‘a’ sea mayor a 1.
+        Utilizar while, for y foreach cuando se debe.
+        Uso de constantes.
+        Utilizar métodos de System.Array y System.Math. (En la medida que sea posible).
+         */
+
+
+
         static void Main(string[] args)
         {
             //Ejercicio 1
@@ -160,7 +209,7 @@ namespace WalterBaya
 
             //printArray(array);
 
-            //arraySum(array);
+            //int sum = arraySum(array);
 
             //biggest(array);
 
@@ -182,6 +231,16 @@ namespace WalterBaya
             //string chain2 = "Mundo";
 
             //mixChains(chain1, chain2);
+
+            //Ejercicio 4
+
+            //const int primosRequeridos = 50;
+            //int[] first50Primes = firstNPrimes(primosRequeridos);
+
+            //printArray(first50Primes);
+            //int sum = arraySum(first50Primes);
+            //Console.WriteLine("El promedio es de: " + ((float)sum / (float)50));
+            
         }
     }
 }
