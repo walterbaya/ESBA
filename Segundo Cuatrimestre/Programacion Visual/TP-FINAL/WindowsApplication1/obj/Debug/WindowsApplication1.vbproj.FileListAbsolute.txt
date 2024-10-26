@@ -28,3 +28,13 @@ C:\Users\walte\Documents\GitHub\ESBA\Segundo Cuatrimestre\Programacion Visual\TP
 C:\Users\walte\Documents\GitHub\ESBA\Segundo Cuatrimestre\Programacion Visual\TP-FINAL\WindowsApplication1\bin\Debug\WindowsApplication1.exe
 C:\Users\walte\Documents\GitHub\ESBA\Segundo Cuatrimestre\Programacion Visual\TP-FINAL\WindowsApplication1\bin\Debug\WindowsApplication1.pdb
 C:\Users\walte\Documents\GitHub\ESBA\Segundo Cuatrimestre\Programacion Visual\TP-FINAL\WindowsApplication1\bin\Debug\WindowsApplication1.xml
+D:\Documentos\GitHub\ESBA\Segundo Cuatrimestre\Programacion Visual\TP-FINAL\WindowsApplication1\obj\Debug\WindowsApplication1.exe
+D:\Documentos\GitHub\ESBA\Segundo Cuatrimestre\Programacion Visual\TP-FINAL\WindowsApplication1\obj\Debug\WindowsApplication1.xml
+D:\Documentos\GitHub\ESBA\Segundo Cuatrimestre\Programacion Visual\TP-FINAL\WindowsApplication1\obj\Debug\WindowsApplication1.pdb
+D:\Documentos\GitHub\ESBA\Segundo Cuatrimestre\Programacion Visual\TP-FINAL\WindowsApplication1\bin\Debug\WindowsApplication1.exe
+D:\Documentos\GitHub\ESBA\Segundo Cuatrimestre\Programacion Visual\TP-FINAL\WindowsApplication1\bin\Debug\WindowsApplication1.pdb
+D:\Documentos\GitHub\ESBA\Segundo Cuatrimestre\Programacion Visual\TP-FINAL\WindowsApplication1\bin\Debug\WindowsApplication1.xml
+D:\Documentos\GitHub\ESBA\Segundo Cuatrimestre\Programacion Visual\TP-FINAL\WindowsApplication1\obj\Debug\ResolveAssemblyReference.cache
+D:\Documentos\GitHub\ESBA\Segundo Cuatrimestre\Programacion Visual\TP-FINAL\WindowsApplication1\obj\Debug\WindowsApplication1.Form1.resources
+D:\Documentos\GitHub\ESBA\Segundo Cuatrimestre\Programacion Visual\TP-FINAL\WindowsApplication1\obj\Debug\WindowsApplication1.Resources.resources
+D:\Documentos\GitHub\ESBA\Segundo Cuatrimestre\Programacion Visual\TP-FINAL\WindowsApplication1\obj\Debug\WindowsApplication1.vbproj.GenerateResource.Cache

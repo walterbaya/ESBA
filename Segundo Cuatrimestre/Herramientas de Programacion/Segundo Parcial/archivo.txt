@@ -1,0 +1,5 @@
+34567890,Matemáticas,44
+34567890,Geografia,45
+39567890,Literatura,75
+39567890,Biologia,44
+39567890,Arte,44
