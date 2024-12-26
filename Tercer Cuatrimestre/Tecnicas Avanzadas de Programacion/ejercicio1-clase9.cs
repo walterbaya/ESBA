@@ -20,11 +20,12 @@ class abstract Trabajador {
         this.sueldo = 0;
     }
     
-    public string getNombre(){
-        return nombre;
+    public string Nombre(){
+        get;
+        set;
     }
     
-    public void setNombre(string nombre){
+    public void Nombre(string nombre){
         nombre = nombre;        
     }
     
