@@ -7,7 +7,7 @@
     <div class="bg-green-700 text-white p-4 rounded mb-6">¡Tu postulación fue enviada con éxito!</div>
   <?php endif; ?>
 
-  <form action="includes/postular.php" method="POST" enctype="multipart/form-data" class="max-w-xl mx-auto space-y-4">
+  <form action="servidor-php/postular.php" method="POST" enctype="multipart/form-data" class="max-w-xl mx-auto space-y-4">
     <div>
       <label for="nombre" class="block mb-1">Nombre completo</label>
       <input type="text" name="nombre" id="nombre" required>
