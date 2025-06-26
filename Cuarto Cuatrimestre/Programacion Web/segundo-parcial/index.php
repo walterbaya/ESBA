@@ -5,68 +5,86 @@ include 'includes/header.php';
 
 <main class="main-content">
     <!-- Hero Section -->
-    <section class="hero bg-dark-900">
+    <section class="hero bg-dark text-white py-5">
         <div class="container">
-            <div class="hero-grid">
-                <div class="hero-content">
-                    <h1 class="hero-title">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h1 class="display-3 fw-bold mb-4">
                         <span class="text-gradient">Software</span> que impulsa<br>
                         <span class="text-outline">el futuro digital</span>
                     </h1>
-                    <p class="hero-subtitle">Soluciones empresariales escalables y arquitecturas de alto rendimiento</p>
-                    <div class="cta-group">
-                        <a href="#contact" class="cta-btn primary">Consulta técnica</a>
-                        <a href="#cases" class="cta-btn secondary">Casos de estudio →</a>
+                    <p class="lead mb-4">Soluciones empresariales escalables y arquitecturas de alto rendimiento</p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="#contact" class="btn btn-primary btn-lg px-4">Consulta técnica</a>
+                        <a href="#cases" class="btn btn-outline-light btn-lg px-4">Casos de estudio <i class="bi bi-arrow-right ms-2"></i></a>
                     </div>
                 </div>
-                <div class="hero-code">
-                    <pre><code class="language-javascript">// Sistema de autenticación empresarial
+                <div class="col-lg-6">
+                    <div class="card bg-dark-800 border-0 p-3">
+                        <div class="card-body p-0">
+                            <pre class="m-0"><code class="language-javascript">// Sistema de autenticación empresarial
 const authSystem = new EnterpriseAuth({
   security: 'OAuth2.0 + MFA',
   scalability: 'Cluster Kubernetes',
   monitoring: 'Real-time Analytics',
   compliance: ['GDPR', 'HIPAA', 'SOC2']
 });</code></pre>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Tech Stack -->
-    <section class="tech-stack bg-dark-800">
+    <section class="py-5 bg-dark-800">
         <div class="container">
-            <h2 class="section-title">Arquitecturas Modernas</h2>
-            <div class="stack-grid">
-                <div class="stack-card">
-                    <div class="stack-icon">λ</div>
-                    <h3>Serverless Computing</h3>
-                    <p>Arquitecturas FaaS con AWS Lambda y Azure Functions</p>
+            <h2 class="text-center mb-5 display-4 fw-bold">Arquitecturas Modernas</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 bg-dark-700 border-0 p-4">
+                        <div class="card-body text-center">
+                            <div class="display-4 mb-3">λ</div>
+                            <h3 class="h4 mb-3">Serverless Computing</h3>
+                            <p class="mb-0">Arquitecturas FaaS con AWS Lambda y Azure Functions</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="stack-card">
-                    <div class="stack-icon"><img src="microservices-icon.svg" alt="Microservices"></div>
-                    <h3>Microservicios</h3>
-                    <p>Sistemas distribuidos con Docker y Kubernetes</p>
+                <div class="col-md-4">
+                    <div class="card h-100 bg-dark-700 border-0 p-4">
+                        <div class="card-body text-center">
+                            <img src="microservices-icon.svg" alt="Microservices" class="img-fluid mb-3" style="height: 60px;">
+                            <h3 class="h4 mb-3">Microservicios</h3>
+                            <p class="mb-0">Sistemas distribuidos con Docker y Kubernetes</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="stack-card">
-                    <div class="stack-icon"><img src="ai-chip.svg" alt="AI"></div>
-                    <h3>AI Integrada</h3>
-                    <p>Modelos MLops en producción con TensorFlow Serving</p>
+                <div class="col-md-4">
+                    <div class="card h-100 bg-dark-700 border-0 p-4">
+                        <div class="card-body text-center">
+                            <img src="ai-chip.svg" alt="AI" class="img-fluid mb-3" style="height: 60px;">
+                            <h3 class="h4 mb-3">AI Integrada</h3>
+                            <p class="mb-0">Modelos MLops en producción con TensorFlow Serving</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Code Example -->
-    <section class="code-sample bg-dark-900">
+    <!-- Code Sample -->
+    <section class="py-5 bg-dark">
         <div class="container">
-            <div class="code-columns">
-                <div class="code-editor">
-                    <div class="editor-header">
-                        <span class="red"></span>
-                        <span class="yellow"></span>
-                        <span class="green"></span>
-                    </div>
-                    <pre><code class="language-python">@distributed_task
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6">
+                    <div class="card bg-dark-800 border-0">
+                        <div class="card-header bg-dark-700 py-3">
+                            <span class="d-inline-block rounded-circle bg-danger me-2" style="width: 12px; height: 12px;"></span>
+                            <span class="d-inline-block rounded-circle bg-warning me-2" style="width: 12px; height: 12px;"></span>
+                            <span class="d-inline-block rounded-circle bg-success" style="width: 12px; height: 12px;"></span>
+                        </div>
+                        <div class="card-body p-0">
+                            <pre class="m-0"><code class="language-python">@distributed_task
 def process_transaction(data):
     with db.transaction():
         validated = validate(data)
@@ -78,14 +96,28 @@ def process_transaction(data):
             'status': 'COMMITTED'
         })
     return result.success</code></pre>
+                        </div>
+                    </div>
                 </div>
-                <div class="code-description">
-                    <h2 class="section-title">Ingeniería de<br> Alto Nivel</h2>
-                    <ul class="tech-list">
-                        <li>Patrón CQRS con Event Sourcing</li>
-                        <li>Encriptación AES-256 + HSMs</li>
-                        <li>Logging distribuido (ELK Stack)</li>
-                        <li>Transacciones atómicas ACID</li>
+                <div class="col-lg-6">
+                    <h2 class="display-4 fw-bold mb-4">Ingeniería de<br> Alto Nivel</h2>
+                    <ul class="list-unstyled">
+                        <li class="mb-3 d-flex align-items-center">
+                            <i class="bi bi-check-circle-fill text-primary me-3"></i>
+                            <span>Patrón CQRS con Event Sourcing</span>
+                        </li>
+                        <li class="mb-3 d-flex align-items-center">
+                            <i class="bi bi-check-circle-fill text-primary me-3"></i>
+                            <span>Encriptación AES-256 + HSMs</span>
+                        </li>
+                        <li class="mb-3 d-flex align-items-center">
+                            <i class="bi bi-check-circle-fill text-primary me-3"></i>
+                            <span>Logging distribuido (ELK Stack)</span>
+                        </li>
+                        <li class="mb-3 d-flex align-items-center">
+                            <i class="bi bi-check-circle-fill text-primary me-3"></i>
+                            <span>Transacciones atómicas ACID</span>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -93,20 +125,24 @@ def process_transaction(data):
     </section>
 
     <!-- Enterprise Features -->
-    <section class="enterprise-features">
+    <section class="py-5">
         <div class="container">
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <h3>01.</h3>
-                    <h4>CI/CD Automatizado</h4>
-                    <p>Pipelines con GitOps y ArgoCD</p>
-                    <div class="feature-tech">
-                        <span>GitLab</span>
-                        <span>Jenkins</span>
-                        <span>Tekton</span>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 bg-dark-800 p-4">
+                        <div class="card-body">
+                            <h3 class="text-gradient">01.</h3>
+                            <h4 class="h3 mb-3">CI/CD Automatizado</h4>
+                            <p class="mb-4">Pipelines con GitOps y ArgoCD</p>
+                            <div class="d-flex flex-wrap gap-2">
+                                <span class="badge bg-dark-700 py-2 px-3">GitLab</span>
+                                <span class="badge bg-dark-700 py-2 px-3">Jenkins</span>
+                                <span class="badge bg-dark-700 py-2 px-3">Tekton</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <!-- Repetir más tarjetas -->
+                <!-- Puedes agregar más tarjetas de características aquí -->
             </div>
         </div>
     </section>

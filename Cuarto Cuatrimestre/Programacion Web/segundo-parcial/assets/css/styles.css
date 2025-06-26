@@ -1,4 +1,4 @@
-/* Fuentes y base */
+/* Fuentes inter */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
@@ -10,11 +10,13 @@
   --text: #e0e0ff;
 }
 
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+
 
 body {
   font-family: 'Inter', sans-serif;
@@ -113,7 +115,6 @@ body {
   font-size: 0.9rem;
 }
 
-/* Tech Stack */
 .tech-stack {
   padding: 6rem 0;
 }
@@ -148,7 +149,6 @@ body {
   color: var(--primary);
 }
 
-/* Code Sample */
 .code-sample {
   padding: 6rem 0;
 }
@@ -208,7 +208,6 @@ body {
   color: var(--primary);
 }
 
-/* Enterprise Features */
 .enterprise-features {
   padding: 6rem 0;
 }
@@ -256,7 +255,7 @@ body {
   }
 }
 
-/* Header Styles */
+/* Header */
 .bg-zinc-900 {
   background: var(--dark-900);
   border-bottom: 1px solid rgba(0, 247, 255, 0.1);
@@ -322,7 +321,7 @@ nav a:hover::before {
   left: 20%;
 }
 
-/* Mobile Responsive */
+/* Reesponsive de mobiel  */
 @media (max-width: 768px) {
   .flex {
     flex-direction: column;
@@ -341,7 +340,7 @@ nav a:hover::before {
   }
 }
 
-/* Footer Styles */
+/* Estilo de footer */
 .bg-zinc-800 {
   background: var(--dark-800);
   border-top: 1px solid rgba(0, 247, 255, 0.1);
@@ -394,7 +393,7 @@ footer:hover p {
   text-shadow: 0 0 10px rgba(0, 247, 255, 0.2);
 }
 
-/* Mobile Responsive */
+/* para mobile */
 @media (max-width: 768px) {
   .py-4 {
     padding: 1.5rem 0;
@@ -410,7 +409,6 @@ footer:hover p {
   }
 }
 
-/* Contact Page Styles */
 .min-h-screen {
   min-height: 100vh;
   display: flex;
@@ -465,6 +463,15 @@ footer:hover p {
   transition: all 0.3s ease;
 }
 
+.text-blue-500:hover {
+  color: #00ffff;
+  text-shadow: 0 0 15px rgba(0, 247, 255, 0.3);
+}
+
+.text-blue-500:hover::after {
+  width: 100%;
+}
+
 .underline {
   position: relative;
 }
@@ -480,14 +487,6 @@ footer:hover p {
   transition: width 0.3s ease;
 }
 
-.text-blue-500:hover {
-  color: #00ffff;
-  text-shadow: 0 0 15px rgba(0, 247, 255, 0.3);
-}
-
-.text-blue-500:hover::after {
-  width: 100%;
-}
 
 @keyframes fadeIn {
   from {
@@ -517,7 +516,6 @@ footer:hover p {
   }
 }
 
-/* Services Page Styles */
 .list-disc {
   list-style: none;
   max-width: 800px;
@@ -563,7 +561,6 @@ footer:hover p {
   font-size: 1.1rem;
 }
 
-/* Numbered Animation */
 .list-inside li::after {
   content: "0" counter(service-item);
   position: absolute;
@@ -573,7 +570,7 @@ footer:hover p {
   font-weight: 700;
 }
 
-/* Responsive Design */
+/* un poco de responsive */
 @media (max-width: 768px) {
   .list-inside li {
     padding: 1rem;
@@ -593,7 +590,7 @@ footer:hover p {
   }
 }
 
-/* Animations */
+/* Animaciones */
 @keyframes slideIn {
   from {
     opacity: 0;
@@ -616,7 +613,6 @@ footer:hover p {
 .list-inside li:nth-child(4) { animation-delay: 0.8s; }
 
 
-/* Projects Page Styles */
 .mt-4 {
   margin-top: 2rem;
   position: relative;
@@ -666,7 +662,7 @@ footer:hover p {
   text-shadow: 0 0 10px rgba(0, 247, 255, 0.3);
 }
 
-/* Project Badge Effect */
+
 .text-gray-300 li::after {
   content: "TECH";
   position: absolute;
@@ -678,7 +674,7 @@ footer:hover p {
   letter-spacing: 2px;
 }
 
-/* Shine Effect on Title */
+/* Efecto del titulo ese en el que se mueve */
 .text-blue-400 {
   position: relative;
   display: inline-block;
@@ -838,6 +834,25 @@ form input[type="file"]::file-selector-button:hover {
   color: #00ff85;
   font-size: 1.5rem;
 }
+
+
+.bg-red-700 {
+  background: rgba(255, 0, 0, 0.315);
+  border: 1px solid rgba(255, 0, 0, 0.692);
+  padding: 1.5rem;
+  border-radius: 8px;
+  position: relative;
+  animation: slideIn 0.5s ease;
+}
+
+.bg-red-700::before {
+  content: "x";
+  position: absolute;
+  left: -30px;
+  color: #ff0000;
+  font-size: 1.5rem;
+}
+
 
 /* Animaciones */
 @keyframes slideIn {
